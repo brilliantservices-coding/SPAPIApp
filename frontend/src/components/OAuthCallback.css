@@ -1,0 +1,130 @@
+.oauth-callback {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.callback-container {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 90%;
+}
+
+.callback-container h2 {
+  color: #1e293b;
+  margin: 1.5rem 0 1rem 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.callback-container p {
+  color: #6b7280;
+  margin: 0.5rem 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Spinner */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #f3f4f6;
+  border-top: 6px solid #ff9900;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Icons */
+.success-icon,
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-icon {
+  color: #16a34a;
+}
+
+.error-icon {
+  color: #dc2626;
+}
+
+/* Error Message */
+.error-message {
+  color: #dc2626 !important;
+  font-weight: 500;
+  background: #fef2f2;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin: 1rem 0 !important;
+}
+
+/* Button */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 140px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff9900 0%, #e47911 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 153, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 153, 0, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .callback-container {
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .callback-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .callback-container p {
+    font-size: 1rem;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+  }
+  
+  .success-icon,
+  .error-icon {
+    font-size: 3rem;
+  }
+} 
